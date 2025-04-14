@@ -1,0 +1,19 @@
+name: try
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v4
+    
+          - name: Try
+            shell: bash
+            env:
+              SECRET: ${{ secrets.Secret }}
+            run: |
+              echo $SECRET
