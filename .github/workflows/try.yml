@@ -16,4 +16,4 @@ jobs:
             env:
               SECRET: ${{ secrets.Secret }}
             run: |
-              echo $SECRET
+              echo SECRET $SECRET
